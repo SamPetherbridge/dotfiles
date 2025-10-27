@@ -50,40 +50,64 @@ The installer will:
 
 ## What's Included
 
+### Core Tech Stack
+
+**Primary Languages:**
+- Python (via `uv`)
+- Swift (native macOS tooling)
+- Kotlin (for Android development)
+
+**Mobile Development:**
+- Android Platform Tools
+- OpenJDK (required for Android)
+- SF Symbols (for iOS/macOS)
+
+**Cloud Platforms:**
+- AWS CLI
+- Google Cloud SDK
+- Azure CLI
+
 ### Development Tools
 
-- **Languages**: Rust, OpenJDK, Deno, Angular CLI
-- **Version Managers**: `uv` (Python), `volta` (Node.js)
-- **Build Tools**: GCC, autoconf, automake, pkg-config
-- **Git Tools**: Git, git-lfs, GitHub CLI (`gh`)
+- **Python**: `uv` (modern package manager replacing pip/pipenv/poetry)
+- **Git**: Git, git-lfs, GitHub CLI (`gh`)
+- **Build Tools**: autoconf, automake, pkg-config, rust
+- **Modern CLI**: jq, yq, fzf, ripgrep, shellcheck, shfmt
+- **Database**: SQLite (local development)
 
 ### Applications (via Homebrew Cask)
 
-- **Development**: VS Code, JetBrains Toolbox, Docker, iTerm2
-- **Design**: Adobe Creative Cloud, Sketch, ImageOptim
-- **Productivity**: 1Password, OmniFocus, Hazel, Keyboard Maestro, Alfred
+- **Development**: VS Code, Docker, iTerm2, Android Platform Tools
+- **Cloud**: Google Cloud SDK, Azure CLI
+- **Design**: Adobe Creative Cloud, ImageOptim
+- **Productivity**: 1Password, Alfred, OmniFocus, Hazel, Keyboard Maestro, Setapp
 - **Communication**: Slack, Discord, Zoom
-- **Browsers**: Firefox, Firefox Developer Edition, Chrome
+- **Browsers**: Firefox, Chrome
 
-### Security Tools
+### Optional: Security Tools
 
-- Network scanning: nmap, nikto, nuclei, massdns
-- Password cracking: hashcat, hydra, john
-- Traffic analysis: mitmproxy, tcpdump, wireshark components
-- Wireless: aircrack-ng, bettercap
+Security/pentesting tools have been moved to `Brewfile.security` for optional installation:
+
+```bash
+# Install security tools when needed
+brew bundle --file=~/.dotfiles/Brewfile.security
+```
+
+Includes: nmap, hashcat, mitmproxy, aircrack-ng, and 25+ other tools for authorized security testing.
 
 ### Shell Features
 
 - GNU coreutils (replacing macOS BSD tools)
 - Custom aliases for Git, Docker, and common operations
-- Optimized PATH configuration for multiple languages
+- Optimized PATH configuration for Python, Android, and Rust
 - Telemetry disabled for major development tools
 
 ## Configuration Files
 
 | File | Purpose |
 |------|---------|
-| `Brewfile` | Homebrew packages and applications |
+| `Brewfile` | Core packages and applications (streamlined) |
+| `Brewfile.security` | Optional security/pentesting tools |
 | `zsh/.zshrc` | Main Zsh configuration |
 | `zsh/custom/*.zsh` | Modular shell configuration (aliases, functions, PATH) |
 | `git/.gitconfig` | Git settings with 1Password SSH signing |
@@ -131,6 +155,30 @@ git pull
 
 # Re-run installer to update symlinks
 ./install.sh
+```
+
+## Optional Installations
+
+### Security Tools
+
+```bash
+brew bundle --file=~/.dotfiles/Brewfile.security
+```
+
+### Additional Tools (install as needed)
+
+```bash
+# Database servers
+brew install postgresql
+brew install redis
+
+# Additional language tooling
+brew install go
+brew install node  # or use volta
+
+# Terraform/Infrastructure
+brew install hashicorp/tap/terraform
+brew install hashicorp/tap/packer
 ```
 
 ## Notes
