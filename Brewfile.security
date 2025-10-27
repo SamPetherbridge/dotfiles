@@ -1,0 +1,54 @@
+###############################
+#  Security & Pentesting      #
+###############################
+#
+# Optional security tools for pentesting and security research
+# Install with: brew bundle --file=Brewfile.security
+#
+# WARNING: These tools are for authorized security testing only
+#
+
+# Network scanning & reconnaissance
+brew "nmap"          # Network scanner
+brew "massdns"       # DNS resolver
+brew "subfinder"     # Subdomain discovery
+brew "dnsx"          # DNS toolkit
+brew "nuclei"        # Vulnerability scanner
+brew "nikto"         # Web server scanner
+brew "httpx"         # HTTP toolkit
+brew "naabu"         # Port scanner
+
+# Traffic analysis
+brew "mitmproxy"     # MITM proxy
+brew "tcpdump"       # Packet capture
+brew "tcpflow"       # TCP flow analyzer
+brew "tcpreplay"     # Traffic replay
+brew "tcptrace"      # TCP analysis
+
+# Password cracking
+brew "hashcat"       # GPU password cracker
+brew "hydra"         # Network login cracker
+brew "john"          # John the Ripper
+brew "fcrackzip"     # ZIP password cracker
+brew "pdfcrack"      # PDF password cracker
+
+# Wireless
+brew "aircrack-ng"   # WiFi security
+brew "bettercap"     # Network attacks & monitoring
+
+# Binary analysis
+brew "binwalk"       # Firmware analysis
+brew "binutils"      # Binary utilities
+brew "apktool"       # Android APK reverse engineering
+brew "vbindiff"      # Visual binary diff
+
+# Misc utilities
+brew "knock"         # Port knocking
+brew "pngcheck"      # PNG validator
+brew "GeoIP2"        # IP geolocation
+
+# GUI Applications (commented out by default)
+# cask "burp-suite"      # Web security testing
+# cask "charles"         # HTTP proxy
+# cask "wifi-explorer"   # WiFi analysis
+# cask "wireshark"       # Network protocol analyzer
