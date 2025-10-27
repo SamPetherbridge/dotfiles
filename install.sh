@@ -45,30 +45,35 @@ if [[ ! -d "$ZINIT_HOME" ]]; then
   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
-# the remainder of the setup tasks are OS-specific
-if [[ "$OSTYPE" = "darwin"* ]]; then
-  # final symlinks
-  if [[ ! -d ~/.ssh ]]; then
-    mkdir -p ~/.ssh && chmod 700 ~/.ssh
-  fi
-  ln -sf "$DOTFILES_PATH/ssh/.ssh/config" ~/.ssh/config
-  ln -sf "$DOTFILES_PATH/nano/brew.nanorc" ~/.nanorc
-  ln -sf "$DOTFILES_PATH/Brewfile" ~/Brewfile
-
-  # suppress terminal login banners
-  touch ~/.hushlogin
-
-  # shellcheck disable=SC1090,SC1091
-  source "$DOTFILES_PATH/macos/macos.sh"
-elif [[ "$OSTYPE" = "linux-gnu"* ]]; then
-  # final symlinks
-  ln -sf "$DOTFILES_PATH/nano/default.nanorc" ~/.nanorc
-
-  # shellcheck disable=SC1090,SC1091
-  source "$DOTFILES_PATH/linux/linux.sh"
-else
-  echo "I don't recognize this OS... skipping extra steps."
+# macOS-specific setup
+if [[ "$OSTYPE" != "darwin"* ]]; then
+  echo "This dotfiles repo is macOS-only. Exiting..."
+  exit 1
 fi
+
+# final symlinks
+if [[ ! -d ~/.ssh ]]; then
+  mkdir -p ~/.ssh && chmod 700 ~/.ssh
+fi
+if [[ ! -d ~/.ssh/conf.d ]]; then
+  mkdir -p ~/.ssh/conf.d
+fi
+ln -sf "$DOTFILES_PATH/ssh/.ssh/config" ~/.ssh/config
+ln -sf "$DOTFILES_PATH/nano/brew.nanorc" ~/.nanorc
+ln -sf "$DOTFILES_PATH/Brewfile" ~/Brewfile
+
+# iTerm2 configuration
+if [[ -f "$DOTFILES_PATH/iterm/default.json" ]]; then
+  # Specify custom preferences directory
+  defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$DOTFILES_PATH/iterm"
+  defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+fi
+
+# suppress terminal login banners
+touch ~/.hushlogin
+
+# shellcheck disable=SC1090,SC1091
+source "$DOTFILES_PATH/macos/macos.sh"
 
 # wow
 echo ""
