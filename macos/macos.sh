@@ -9,12 +9,12 @@ sudo -v
 sudo softwareupdate --install --all
 
 # Install Rosetta 2
-sudo softwareupdate --install-rosetta --agree-to-license
+# sudo softwareupdate --install-rosetta --agree-to-license
 
 # Install Xcode Command Line Tools
-sudo xcode-select --install
+# sudo xcode-select --install
 # Accept Xcode license
-sudo xcodebuild -license accept
+# sudo xcodebuild -license accept
 
 # This whole thing kinda hinges on having Homebrew...
 # Check for it and install from GitHub if it's not there
