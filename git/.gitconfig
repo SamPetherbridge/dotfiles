@@ -9,6 +9,7 @@
 [user]
 	email = sam@peth.me
 	name = Sam Petherbridge
+	signingkey = key::ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDnQw5xDlQIvh5qtKVFsNvzli2hFxyvTMoPWOn4C+Zs9 SSH Key - Github
 [init]
 	defaultBranch = main
 [push]
@@ -38,6 +39,13 @@
 	aliases = config --get-regexp alias
 	contributors = shortlog --summary --numbered
 	new = !git init && git symbolic-ref HEAD refs/heads/main
+	worktree-llm = !git-worktree-llm
+	worktree-merge = !git-worktree-merge
+	worktree-list = !git-worktree-list
+	worktree-switch = !git-worktree-switch
+	worktree-remove = !git-worktree-remove
+	worktree-prune = !git-worktree-prune
+	commit-llm = !git-commit-llm
 # [credential]
 # 	helper = osxkeychain
 # [gpg]
@@ -63,3 +71,7 @@
 	hunk-header-style = omit
 	line-numbers = true
 	syntax-theme = base16
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
