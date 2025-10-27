@@ -68,10 +68,16 @@ brew "uv"        # Modern Python package manager
 brew "sqlite"    # Useful for local dev
 
 # Mobile development
-brew "openjdk"   # Required for Android development
+brew "openjdk"      # Required for Android development
+brew "fastlane"     # iOS/Android CI/CD automation
+brew "swiftlint"    # Swift code linting
+brew "swiftformat"  # Swift code formatting
 
 # Systems programming
-brew "rust"      # Rust toolchain (also useful for CLI tools)
+brew "rust"         # Rust toolchain (also useful for CLI tools)
+
+# Static site generation
+brew "hugo"         # Static site generator
 
 ###############################
 #  Cloud & Infrastructure     #
@@ -121,16 +127,22 @@ cask "tailscale"
 # Development Tools
 cask "visual-studio-code"
 cask "iterm2"
+cask "warp"                                    # Modern terminal
 cask "docker"
 cask "android-platform-tools", args: { appdir: "~/Applications" }
+cask "jetbrains-toolbox"                       # IntelliJ/Android Studio
+cask "xcodes"                                  # Xcode version manager
+cask "chromedriver"                            # Selenium WebDriver
 
 # Cloud SDKs
 cask "google-cloud-sdk", args: { appdir: "~/Applications" }
 cask "azure-cli"
+cask "powershell"                              # PowerShell Core
 
 # Design & Creative
 cask "adobe-creative-cloud"
 cask "imageoptim"
+cask "omnigraffle"                             # Diagramming tool
 
 # Productivity
 cask "alfred"
@@ -145,9 +157,17 @@ cask "slack"
 cask "discord"
 cask "zoomus"
 
-# Browsers (choose your favorites)
+# Utilities
+cask "cyberduck"                               # FTP/cloud storage client
+
+# Browsers
 cask "firefox"
 cask "google-chrome"
+cask "microsoft-edge"
+
+# AI Tools
+cask "chatgpt"                                 # ChatGPT desktop app
+cask "claude"                                  # Claude desktop app
 
 # Development utilities
 cask "sf-symbols"  # iOS/macOS development
@@ -183,8 +203,32 @@ mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 
-# Third Party
+# Development Tools (MAS)
+mas "RocketSim", id: 1504940162                # iOS simulator enhancer
+mas "DevCleaner", id: 1388020431               # Xcode cache cleaner
+mas "CustomSymbols", id: 1566662030            # SF Symbols extension
+
+# Productivity
 mas "1Password for Safari", id: 1569813296
 mas "Amphetamine", id: 937984704
 mas "Drafts", id: 1435957248
 mas "Fantastical", id: 975937182
+mas "Cardhop", id: 1290358394                  # Contacts manager
+mas "Tot", id: 1491071483                      # Quick notes
+
+# Communication
+mas "WhatsApp", id: 775737590
+
+# Writing & Reading
+mas "iA Writer", id: 775737590
+
+# Design & Media
+mas "Pixelmator Pro", id: 1289583905           # Image editor
+mas "Photomator", id: 1444636541               # Photo editor
+mas "Pastel", id: 413897608                    # Color picker
+mas "Picasso", id: 6472062986                  # Design tool
+
+# Utilities
+mas "Screens 5", id: 1663047912                # Remote desktop
+mas "Dark Noise", id: 1465439395               # Ambient sounds
+mas "Termius", id: 1176074088                  # SSH client
