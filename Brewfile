@@ -138,6 +138,7 @@ cask "omnifocus"
 cask "hazel"
 cask "keyboard-maestro"
 cask "setapp"
+cask "microsoft-office"
 
 # Communication
 cask "slack"
@@ -186,3 +187,4 @@ mas "Pages", id: 409201541
 mas "1Password for Safari", id: 1569813296
 mas "Amphetamine", id: 937984704
 mas "Drafts", id: 1435957248
+mas "Fantastical", id: 975937182
