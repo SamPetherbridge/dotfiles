@@ -138,8 +138,7 @@ Edit `COMPUTER_NAME` in `macos/defaults.sh` before running the installer
 ## Key Technologies
 
 - **Shell**: Zsh with [zinit](https://github.com/zdharma-continuum/zinit) plugin manager
-- **Prompt**: Starship prompt (configured in `starship/config.toml`)
-- **Theme**: Powerlevel10k (included in `zsh/themes/`)
+- **Prompt**: [Powerlevel10k](https://github.com/romkatv/powerlevel10k) theme (included in `zsh/themes/`)
 - **Git Diff**: [Delta](https://github.com/dandavison/delta) for syntax-highlighted diffs
 - **Python**: [uv](https://github.com/astral-sh/uv) for fast Python package management
 
