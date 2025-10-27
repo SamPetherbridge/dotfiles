@@ -50,41 +50,7 @@ alias dcd="docker compose down"
 alias dcr="docker compose down && docker compose up -d"
 alias dcl="docker compose logs -f"
 
-# multipass
-alias mp="multipass"
-mpl() {
-  # creates VM and opens its bash shell
-  # `mpl test1 4G 20.04`
-  multipass launch "${2:-jammy}" --cpus 4 --mem "${3:-2G}" --disk 20G --name "$1" && \
-  multipass shell "$1"
-}
-alias mpls="multipass list"
-alias mpsh="multipass shell"
-alias mpk="multipass stop"
-alias mpd="multipass delete"
-
-# Node/NPM/Yarn
-alias npr="npm run"
-alias fresh_npm="rm -rf node_modules package-lock.json && npm install"
-alias fresh_yarn="rm -rf node_modules yarn.lock && yarn install"
-
 # uncomment to use VS Code insiders build
 # alias code="code-insiders"
 # open current working directory in VS Code
 alias vs="code ."
-
-# an original creation, see https://github.com/jakejarvis/simpip
-alias ipv4="curl -4 simpip.com --max-time 1 --proto-default https --silent"
-alias ipv6="curl -6 simpip.com --max-time 1 --proto-default https --silent"
-alias ip="ipv4; ipv6"
-alias ip-local="ipconfig getifaddr en0"
-alias ips="ip; ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
-
-# youtube-dl
-alias youtube-dl="yt-dlp"  # better youtube-dl fork: https://github.com/yt-dlp/yt-dlp
-alias ytdl="youtube-dl -f bestvideo+bestaudio"
-alias ytmp3="youtube-dl -f bestaudio -x --audio-format mp3 --audio-quality 320K"
-
-# misc.
-alias screenfetch="neofetch"
-alias weather="curl 'https://wttr.in/?format=v2'"

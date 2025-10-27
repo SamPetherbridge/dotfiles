@@ -5,8 +5,8 @@ autoload -U colors && colors
 autoload -Uz url-quote-magic
 zle -N self-insert url-quote-magic
 
-autoload -Uz select-word-style
-select-word-style bash
+# autoload -Uz select-word-style
+# select-word-style bash
 
 # enable bash-like 'help' command for zsh:
 # https://stackoverflow.com/questions/4405382/how-can-i-read-documentation-about-built-in-zsh-commands
