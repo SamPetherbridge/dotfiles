@@ -11,7 +11,6 @@ tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
-tap "homebrew/core"
 tap "homebrew/services"
 tap "ngrok/ngrok"
 tap "planetscale/tap"
@@ -23,10 +22,10 @@ tap "sidneys/homebrew"
 ###############################
 
 # Perhaps most importantly...
-brew "zsh" unless OS.linux?
+brew "zsh"
 
 # Better bash as a backup
-brew "bash" unless OS.linux?
+brew "bash"
 
 # GNU utilities (those that come with macOS are outdated)
 brew "coreutils"
@@ -59,14 +58,13 @@ brew "ffmpeg"  #, args: ["with-libvpx"]
 brew "imagemagick"  #, args: ["with-webp"]
 brew "jemalloc"
 brew "less"
-brew "libsass", args: ["HEAD"]
 brew "libyaml"
 brew "mtr"
-brew "openssl@1.1" if OS.mac?
+brew "openssl@3"
 brew "p7zip"
 brew "pkg-config"
 brew "readline"
-brew "sidneys/homebrew/unrar" if OS.mac?
+brew "sidneys/homebrew/unrar"
 brew "ssh-copy-id", link: true
 brew "tmux"
 brew "tree"
@@ -78,7 +76,7 @@ brew "git-lfs"
 brew "gh"
 
 # Mostly ordinary binaries
-brew "1password/tap/1password-cli" if OS.mac?
+brew "1password/tap/1password-cli"
 brew "angular-cli"
 brew "asciinema"
 brew "aws-shell"
@@ -103,7 +101,7 @@ brew "ipinfo-cli"
 brew "iproute2mac"
 brew "jq"
 brew "mariadb"
-brew "mas" if OS.mac?
+brew "mas"
 brew "mhash"
 brew "mkcert"
 brew "mysql-client"
@@ -119,16 +117,9 @@ brew "openjdk"
 brew "pngcrush"
 # brew "postgresql"
 brew "protobuf"
-brew "pyenv" unless OS.linux?
-# brew "python"
-# brew "python@3"
 brew "qemu"
-# brew "rbenv" unless OS.linux?
-# brew "rclone"
-# brew "rlwrap"
-# brew "ruby-build" unless OS.linux?
-# brew "ruby"
 brew "rust"
+brew "uv"
 brew "s3cmd"
 brew "sass/sass/dart-sass-embedded"
 brew "sass/sass/sass"
@@ -136,11 +127,6 @@ brew "sass/sass/sass"
 brew "shellcheck"
 brew "shfmt"
 brew "sqlite"
-# brew "subversion"
-# brew "svn"
-# brew "tor"
-# brew "torsocks"
-# brew "volta" unless OS.linux?
 brew "whois", link: true
 brew "wireguard-tools"
 brew "wp-cli"
@@ -192,7 +178,6 @@ cask_args appdir: "/Applications"
 # cask "coconutbattery"
 # cask "daisydisk"
 cask "dropbox"
-cask "etrecheckpro"
 cask "the-unarchiver"
 cask "vnc-viewer"
 
@@ -208,13 +193,19 @@ cask "google-cloud-sdk", args: { appdir: "~/Applications" }
 cask "imageoptim"
 cask "iterm2"
 cask "jetbrains-toolbox"
-cask "microsoft-office"
+# cask "microsoft-office"
+# cask "microsoft-outlook"
+# cask "microsoft-powerpoint"
+# cask "microsoft-word"
+# cask "microsoft-excel"
+# cask "onedrive"
+# cask "microsoft-teams"
 cask "ngrok/ngrok/ngrok"
 cask "sketch"
 cask "visual-studio-code"
 cask "setapp"
 cask "sf-symbols"
-cash "omnifocus"
+cask "omnifocus"
 cask "hazel"
 cask "keyboard-maestro"
 
@@ -247,6 +238,9 @@ cask "firefox"
 cask "firefox-developer-edition"
 cask "google-chrome"
 
+cask "alfred"
+cask "post-haste"
+
 ###############################
 #  Drivers                    #
 ###############################
@@ -263,6 +257,7 @@ cask "homebrew/cask-fonts/font-hack"
 cask "homebrew/cask-fonts/font-ibm-plex-mono"
 cask "homebrew/cask-fonts/font-roboto-mono"
 cask "homebrew/cask-fonts/font-sf-mono"
+cask "homebrew/font-sf-mono-nerd-font"
 cask "homebrew/cask-fonts/font-sf-mono-for-powerline"
 cask "homebrew/cask-fonts/font-source-code-pro"
 
@@ -293,11 +288,11 @@ mas "1Blocker", id: 1365531024
 mas "1Password for Safari", id: 1569813296
 mas "Amphetamine", id: 937984704
 mas "Drafts", id: 1435957248
-mas install 975937182 # Fantastical
-mas install 1289583905 # Pixelmator
-mas install 1465439395 # Dark Noise
+# mas install 975937182 # Fantastical
+# mas install 1289583905 # Pixelmator
+# mas install 1465439395 # Dark Noise
 
-mas install 413897608 # Pastel
-mas install 462058435 # MS Excel
-mas install 462054704 # MS Word
-mas install 462062816 # Ms PowerPoint
+# mas install 413897608 # Pastel
+# mas install 462058435 # MS Excel
+# mas install 462054704 # MS Word
+# mas install 462062816 # Ms PowerPoint
