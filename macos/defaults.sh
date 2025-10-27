@@ -11,8 +11,8 @@ set -e
 # Change new hostname here if necessary
 COMPUTER_NAME="Peth-MBP"
 
-# Quit System Preferences.app if open
-osascript -e 'tell application "System Preferences" to quit'
+# Quit System Settings/Preferences.app if open (System Preferences renamed to System Settings in macOS 13+)
+osascript -e 'tell application "System Settings" to quit' 2>/dev/null || osascript -e 'tell application "System Preferences" to quit' 2>/dev/null || true
 
 # Ask for the administrator password upfront
 sudo -v
@@ -135,7 +135,7 @@ defaults write com.apple.screencapture type -string "png"
 ###############################################################################
 
 # Finder: show all filename extensions
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+# defaults write NSGlobalDomain AppleShowAllExtensions -bool false
 
 # Finder: show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
@@ -187,8 +187,11 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 0
 
+# Dock on the right side of the screen
+defaults write com.apple.dock "orientation" -string "right"
+
 # Group windows by application in Mission Control
-defaults write com.apple.dock expose-group-by-app -bool true
+# defaults write com.apple.dock expose-group-by-app -bool true
 
 # Disable hot corners
 defaults write com.apple.dock wvous-tl-corner -int 0
@@ -298,6 +301,18 @@ defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -bool true
 
 # Turn off app auto-update
 defaults write com.apple.commerce AutoUpdate -bool false
+
+###############################################################################
+# Music                                                                       #
+###############################################################################
+
+defaults write com.apple.Music "userWantsPlaybackNotifications" -bool "false"
+
+###############################################################################
+# iOS Simulator                                                               #
+###############################################################################
+
+defaults write com.apple.iphonesimulator "ScreenShotSaveLocation" -string "~/Desktop"
 
 ###############################################################################
 # Finished!                                                                   #
