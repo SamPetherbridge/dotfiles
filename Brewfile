@@ -2,10 +2,8 @@
 #  Taps                       #
 ###############################
 tap "1password/tap"
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-tap "homebrew/services"
+# Note: homebrew/cask, homebrew/cask-fonts, homebrew/bundle, and homebrew/services
+# are now built into Homebrew core and no longer need to be tapped
 
 ###############################
 #  Core Shell & Utilities     #
