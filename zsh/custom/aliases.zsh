@@ -6,6 +6,14 @@ alias sudo="sudo "
 # Homebrew
 alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
 
+# Navigation shortcuts
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~"
+alias -- -="cd -"  # Go back to previous directory
+
 # colorful ls
 alias ls="ls -G --color=auto"
 alias ll="ls -lah"
@@ -53,7 +61,21 @@ alias dcd="docker compose down"
 alias dcr="docker compose down && docker compose up -d"
 alias dcl="docker compose logs -f"
 
-# uncomment to use VS Code insiders build
-# alias code="code-insiders"
-# open current working directory in VS Code
+# VS Code
 alias vs="code ."
+
+# Global aliases (work anywhere in the command)
+alias -g G='| grep'
+alias -g L='| less'
+alias -g H='| head'
+alias -g T='| tail'
+alias -g NE='2> /dev/null'
+alias -g NUL='> /dev/null 2>&1'
+
+# Quick directory access
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias dev="cd ~/Developer"
+
+# Cleanup
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"

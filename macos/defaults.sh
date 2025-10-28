@@ -40,9 +40,6 @@ sudo systemsetup -settimezone "Australia/Brisbane" >/dev/null
 # Disable audio feedback when volume is changed
 defaults write com.apple.sound.beep.feedback -bool false
 
-# Menu bar: show battery percentage
-defaults write com.apple.menuextra.battery ShowPercent "YES"
-
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
@@ -79,10 +76,11 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 defaults write NSGlobalDomain KeyRepeat -int 5
 defaults write NSGlobalDomain InitialKeyRepeat -int 25
 
-# Automatically illuminate built-in MacBook keyboard in low light
+# Automatically illuminate built-in MacBook keyboard in low light (MacBook only)
+# Note: Only applies to MacBooks with keyboard backlight
 defaults write com.apple.BezelServices kDim -bool true
 
-# Turn off keyboard illumination when computer is not used for 5 minutes
+# Turn off keyboard illumination when computer is not used for 5 minutes (MacBook only)
 defaults write com.apple.BezelServices kDimTime -int 300
 
 # Disable auto-correct
@@ -114,7 +112,8 @@ sudo systemsetup -setrestartfreeze on
 sudo pmset -a standbydelay 86400
 
 # Don't automatically boot when shut down completely and lid opened
-sudo nvram AutoBoot=%00
+# Note: May not work on Apple Silicon Macs
+# sudo nvram AutoBoot=%00
 
 ###############################################################################
 # Screen                                                                      #
@@ -275,13 +274,6 @@ defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
-
-###############################################################################
-# GPGMail 2                                                                   #
-###############################################################################
-
-# Disable signing emails by default
-defaults write ~/Library/Preferences/org.gpgtools.gpgmail SignNewEmailsByDefault -bool false
 
 ###############################################################################
 # Software Updates                                                            #
