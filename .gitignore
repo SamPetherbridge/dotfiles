@@ -1,1 +1,5 @@
 .claude/
+
+# Personal SSH host configurations (keep private)
+ssh/.ssh/conf.d/personal-hosts
+ssh/.ssh/conf.d/*-private*
