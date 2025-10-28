@@ -35,7 +35,7 @@ defaults write NSGlobalDomain AppleLanguages -array "en"
 defaults write NSGlobalDomain AppleLocale -string "en_AU@currency=AUD"
 
 # Set the timezone (see `sudo systemsetup -listtimezones` for other values)
-sudo systemsetup -settimezone "Australia/Brisbane" >/dev/null
+sudo systemsetup -settimezone "Australia/Brisbane" 2>/dev/null || true
 
 # Disable audio feedback when volume is changed
 defaults write com.apple.sound.beep.feedback -bool false
@@ -48,8 +48,9 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 
-# Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
-/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+# Remove duplicates in the "Open With" menu (also see `lscleanup` alias)
+# Note: -kill flag removed in modern macOS (was dangerous and no longer useful)
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -r -domain local -domain system -domain user
 
 # Disable Resume system-wide
 defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
@@ -106,7 +107,8 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 sudo pmset -a autorestart 1
 
 # Restart automatically if the computer freezes
-sudo systemsetup -setrestartfreeze on
+# Note: May not work on all macOS versions/configurations
+sudo systemsetup -setrestartfreeze on 2>/dev/null || true
 
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
