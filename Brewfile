@@ -100,7 +100,7 @@ brew "httpie"    # Better curl for APIs
 #  1Password Integration      #
 ###############################
 
-brew "1password/tap/1password-cli"
+brew "1password-cli"           # 1Password CLI (moved to core homebrew)
 
 ###############################
 #  Media & Utilities          #
@@ -121,16 +121,16 @@ cask "the-unarchiver"
 
 # Security & Networking
 cask "1password"
-cask "tailscale"
+cask "tailscale-app"                           # Tailscale VPN (renamed from tailscale)
 
 # Development Tools
 cask "visual-studio-code"
 cask "iterm2"
 cask "warp"                                    # Modern terminal
-cask "docker"
+cask "docker-desktop"                          # Docker Desktop (renamed from docker)
 cask "android-platform-tools", args: { appdir: "~/Applications" }
 cask "jetbrains-toolbox"                       # IntelliJ/Android Studio
-cask "xcodes"                                  # Xcode version manager
+cask "xcodes-app"                              # Xcode version manager (renamed from xcodes)
 cask "chromedriver"                            # Selenium WebDriver
 
 # Cloud SDKs

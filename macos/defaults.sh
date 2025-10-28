@@ -213,14 +213,15 @@ defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
 # Mail                                                                        #
 ###############################################################################
 
+# Note: Mail.app is containerized in modern macOS, these settings may not work
 # Disable inline attachments (just show the icons)
-defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
+defaults write com.apple.mail DisableInlineAttachmentViewing -bool true 2>/dev/null || true
 
 # Compose mail in plain-text
 # defaults write com.apple.mail SendFormat Plain
 
 # Disable remote content
-defaults write com.apple.mail DisableURLLoading -bool true
+defaults write com.apple.mail DisableURLLoading -bool true 2>/dev/null || true
 
 ###############################################################################
 # Activity Monitor                                                            #
