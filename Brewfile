@@ -84,7 +84,8 @@ brew "hugo"         # Static site generator
 # AWS
 brew "awscli"
 
-# Azure CLI will be installed via cask below
+# Azure
+brew "azure-cli"
 
 # Network & debugging
 brew "mkcert"    # Local HTTPS certificates
@@ -133,8 +134,7 @@ cask "xcodes"                                  # Xcode version manager
 cask "chromedriver"                            # Selenium WebDriver
 
 # Cloud SDKs
-cask "google-cloud-sdk", args: { appdir: "~/Applications" }
-cask "azure-cli"
+cask "gcloud-cli"                              # Google Cloud CLI (renamed from google-cloud-sdk)
 cask "powershell"                              # PowerShell Core
 
 # Design & Creative
