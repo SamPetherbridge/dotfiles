@@ -46,7 +46,17 @@ The installer will:
 1. **Log out and log back in** to activate all Zsh features
 2. **Configure 1Password SSH Agent**: Ensure 1Password is installed and SSH agent is enabled
 3. **Import iTerm2 colors**: Color schemes are in `iterm/` directory
-4. **Review Brewfile**: Uncomment any additional packages you need
+4. **Apply Firefox privacy config** (optional):
+   ```bash
+   # Find your Firefox profile directory
+   open ~/Library/Application\ Support/Firefox/Profiles/
+
+   # Copy privacy-hardened config to your default profile
+   cp ~/.dotfiles/firefox/user.js ~/Library/Application\ Support/Firefox/Profiles/*.default-release/
+
+   # Restart Firefox for changes to take effect
+   ```
+5. **Review Brewfile**: Uncomment any additional packages you need
 
 ## What's Included
 
@@ -113,6 +123,7 @@ Includes: nmap, hashcat, mitmproxy, aircrack-ng, and 25+ other tools for authori
 | `git/.gitconfig` | Git settings with 1Password SSH signing |
 | `ssh/.ssh/config` | SSH client configuration with security hardening |
 | `iterm/` | iTerm2 preferences and color schemes |
+| `firefox/user.js` | Firefox privacy-hardened settings (manual install) |
 | `macos/defaults.sh` | macOS system preferences |
 
 ## Customization

@@ -3,6 +3,9 @@
 # allow sudo-able aliases
 alias sudo="sudo "
 
+# Homebrew
+alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
+
 # colorful ls
 alias ls="ls -G --color=auto"
 alias ll="ls -lah"
