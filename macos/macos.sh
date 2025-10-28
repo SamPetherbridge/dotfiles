@@ -45,7 +45,7 @@ mkdir -p ~/.1password
 ln -sf ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock ~/.1password/agent.sock
 
 # Install all apps from the Brewfile, ignore errors
-brew tap homebrew/bundle
+# brew bundle is now built into Homebrew core (no tap needed)
 brew bundle || true
 
 # Set macOS defaults
