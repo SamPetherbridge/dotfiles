@@ -123,8 +123,8 @@ sudo pmset -a standbydelay 86400
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-# Save screenshots to the desktop
-defaults write com.apple.screencapture location -string "${HOME}/Desktop"
+# Save screenshots to Downloads (temporary by nature, easy to clean up)
+defaults write com.apple.screencapture location -string "${HOME}/Downloads"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
@@ -304,7 +304,8 @@ defaults write com.apple.Music "userWantsPlaybackNotifications" -bool "false"
 # iOS Simulator                                                               #
 ###############################################################################
 
-defaults write com.apple.iphonesimulator "ScreenShotSaveLocation" -string "~/Desktop"
+# Save iOS Simulator screenshots to Downloads as well
+defaults write com.apple.iphonesimulator "ScreenShotSaveLocation" -string "${HOME}/Downloads"
 
 ###############################################################################
 # Finished!                                                                   #
