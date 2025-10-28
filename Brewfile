@@ -153,7 +153,7 @@ cask "microsoft-office"
 # Communication
 cask "slack"
 cask "discord"
-cask "zoomus"
+cask "zoom"
 
 # Utilities
 cask "cyberduck"                               # FTP/cloud storage client
