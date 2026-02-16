@@ -40,9 +40,11 @@ if ! grep -qxF "$BREW_ZSH" /etc/shells; then
   echo "$BREW_ZSH" | sudo tee -a /etc/shells >/dev/null
 fi
 
-# Switch default shell only if not already set
-if [[ "$SHELL" != "$BREW_ZSH" ]]; then
-  sudo chsh -s "$BREW_ZSH" "$USER"
+# Switch default shell only if not already set (use dscl to check actual
+# setting, not $SHELL which reflects the session's original shell)
+CURRENT_SHELL=$(dscl . -read /Users/"$USER" UserShell | awk '{print $2}')
+if [[ "$CURRENT_SHELL" != "$BREW_ZSH" ]]; then
+  sudo dscl . -change /Users/"$USER" UserShell "$CURRENT_SHELL" "$BREW_ZSH"
 fi
 
 # https://github.com/ohmyzsh/ohmyzsh/issues/6835#issuecomment-390187157
