@@ -12,6 +12,8 @@ tap "1password/tap"
 # Shells
 brew "zsh"
 brew "bash"
+brew "starship"                # Cross-shell prompt
+brew "zsh-autosuggestions"     # Fish-like autosuggestions for zsh
 
 # GNU utilities (better than macOS BSD defaults)
 brew "coreutils"
@@ -21,6 +23,7 @@ brew "grep"
 brew "make"
 
 # Essential system tools
+brew "mas"       # Mac App Store CLI (used by mas entries below)
 brew "curl"
 brew "nano"
 brew "openssh"
@@ -48,6 +51,7 @@ brew "jq"        # JSON processor
 brew "yq"        # YAML processor
 brew "fzf"       # Fuzzy finder
 brew "ripgrep"   # Fast grep alternative
+brew "git-delta" # Better git diffs (used as pager in .gitconfig)
 brew "shellcheck" # Shell script linter
 brew "shfmt"     # Shell formatter
 
@@ -70,6 +74,9 @@ brew "openjdk"      # Required for Android development
 brew "fastlane"     # iOS/Android CI/CD automation
 brew "swiftlint"    # Swift code linting
 brew "swiftformat"  # Swift code formatting
+
+# JavaScript
+brew "node"            # Node.js runtime
 
 # Systems programming
 brew "rust"         # Rust toolchain (also useful for CLI tools)
@@ -95,6 +102,7 @@ brew "wireguard-tools"
 
 # Container & API tools
 brew "httpie"    # Better curl for APIs
+cask "postman"   # API testing tool
 
 ###############################
 #  1Password Integration      #
@@ -126,6 +134,7 @@ cask "tailscale-app"                           # Tailscale VPN (renamed from tai
 # Development Tools
 cask "visual-studio-code"
 cask "iterm2"
+cask "ghostty"                                 # GPU-accelerated terminal
 cask "warp"                                    # Modern terminal
 cask "docker-desktop"                          # Docker Desktop (renamed from docker)
 cask "android-platform-tools", args: { appdir: "~/Applications" }
@@ -148,7 +157,9 @@ cask "omnifocus"
 cask "hazel"
 cask "keyboard-maestro"
 cask "setapp"
-cask "microsoft-office"
+cask "microsoft-word"
+cask "microsoft-excel"
+cask "microsoft-powerpoint"
 
 # Communication
 cask "slack"
@@ -166,6 +177,7 @@ cask "microsoft-edge"
 # AI Tools
 cask "chatgpt"                                 # ChatGPT desktop app
 cask "claude"                                  # Claude desktop app
+cask "codex"                                   # OpenAI Codex CLI
 
 # Development utilities
 cask "sf-symbols"  # iOS/macOS development
@@ -215,7 +227,7 @@ mas "Cardhop", id: 1290358394                  # Contacts manager
 mas "Tot", id: 1491071483                      # Quick notes
 
 # Communication
-mas "WhatsApp", id: 775737590
+mas "WhatsApp", id: 310633997
 
 # Writing & Reading
 mas "iA Writer", id: 775737590
