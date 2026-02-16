@@ -8,8 +8,11 @@
 
 set -e
 
-# Change new hostname here if necessary
-COMPUTER_NAME="Peth-MBP"
+# Prompt for computer name (default to current name)
+CURRENT_NAME=$(scutil --get ComputerName 2>/dev/null || echo "Mac")
+printf "Computer name [%s]: " "$CURRENT_NAME"
+read -r COMPUTER_NAME
+COMPUTER_NAME="${COMPUTER_NAME:-$CURRENT_NAME}"
 
 # Quit System Settings/Preferences.app if open (System Preferences renamed to System Settings in macOS 13+)
 osascript -e 'tell application "System Settings" to quit' 2>/dev/null || osascript -e 'tell application "System Preferences" to quit' 2>/dev/null || true
@@ -270,13 +273,6 @@ defaults write com.apple.TextEdit RichText -int 0
 # Open and save files as UTF-8 in TextEdit
 defaults write com.apple.TextEdit PlainTextEncoding -int 4
 defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
-
-###############################################################################
-# iTerm 2                                                                     #
-###############################################################################
-
-# Don’t display the annoying prompt when quitting iTerm
-defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 ###############################################################################
 # Software Updates                                                            #
