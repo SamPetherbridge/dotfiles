@@ -32,8 +32,18 @@ brew update
 # Install more current ZSH and set as default shell
 # https://stackoverflow.com/a/44549662/1438024
 brew install zsh
-sudo sh -c "echo $(brew --prefix)/bin/zsh >> /etc/shells"
-chsh -s "$(brew --prefix)/bin/zsh"
+
+BREW_ZSH="$(brew --prefix)/bin/zsh"
+
+# Add brew's zsh to /etc/shells if not already there
+if ! grep -qxF "$BREW_ZSH" /etc/shells; then
+  echo "$BREW_ZSH" | sudo tee -a /etc/shells >/dev/null
+fi
+
+# Switch default shell only if not already set
+if [[ "$SHELL" != "$BREW_ZSH" ]]; then
+  sudo chsh -s "$BREW_ZSH" "$USER"
+fi
 
 # https://github.com/ohmyzsh/ohmyzsh/issues/6835#issuecomment-390187157
 chmod 755 "$(brew --prefix)/share/zsh"
