@@ -1,9 +1,8 @@
 ###############################
 #  Taps                       #
 ###############################
-tap "1password/tap"
-# Note: homebrew/cask, homebrew/cask-fonts, homebrew/bundle, and homebrew/services
-# are now built into Homebrew core and no longer need to be tapped
+# Note: homebrew/cask, homebrew/cask-fonts, homebrew/bundle, homebrew/services,
+# and 1password/tap are now built into Homebrew core and no longer need to be tapped
 
 ###############################
 #  Core Shell & Utilities     #
@@ -102,7 +101,6 @@ brew "wireguard-tools"
 
 # Container & API tools
 brew "httpie"    # Better curl for APIs
-cask "postman"   # API testing tool
 
 ###############################
 #  1Password Integration      #
@@ -133,7 +131,6 @@ cask "tailscale-app"                           # Tailscale VPN (renamed from tai
 
 # Development Tools
 cask "visual-studio-code"
-cask "iterm2"
 cask "ghostty"                                 # GPU-accelerated terminal
 cask "warp"                                    # Modern terminal
 cask "orbstack"                                # Docker & Linux VM (replaces Docker Desktop)
@@ -141,6 +138,7 @@ cask "android-platform-tools", args: { appdir: "~/Applications" }
 cask "jetbrains-toolbox"                       # IntelliJ/Android Studio
 cask "xcodes-app"                              # Xcode version manager (renamed from xcodes)
 cask "chromedriver"                            # Selenium WebDriver
+cask "postman"                                 # API testing tool
 
 # Cloud SDKs
 cask "gcloud-cli"                              # Google Cloud CLI (renamed from google-cloud-sdk)

@@ -37,13 +37,6 @@ ln -sf "$DOTFILES_PATH/git/.gitignore_global" ~/.gitignore_global
 # this file will be sourced by .zshrc for more sensitive variables/settings
 touch ~/.zshrc.local
 
-# prepare zinit manually
-ZINIT_HOME="$HOME/.local/share/zinit/zinit.git"
-if [[ ! -d "$ZINIT_HOME" ]]; then
-  mkdir -p "$(dirname "$ZINIT_HOME")"
-  git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
-fi
-
 # macOS-specific setup
 if [[ "$OSTYPE" != "darwin"* ]]; then
   echo "This dotfiles repo is macOS-only. Exiting..."
@@ -60,13 +53,6 @@ fi
 ln -sf "$DOTFILES_PATH/ssh/.ssh/config" ~/.ssh/config
 ln -sf "$DOTFILES_PATH/nano/brew.nanorc" ~/.nanorc
 ln -sf "$DOTFILES_PATH/Brewfile" ~/Brewfile
-
-# iTerm2 configuration
-if [[ -f "$DOTFILES_PATH/iterm/default.json" ]]; then
-  # Specify custom preferences directory
-  defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$DOTFILES_PATH/iterm"
-  defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
-fi
 
 # suppress terminal login banners
 touch ~/.hushlogin

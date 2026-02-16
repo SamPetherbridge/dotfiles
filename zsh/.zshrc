@@ -29,8 +29,3 @@ if [[ -d "$HOME/Library/Android/sdk" ]]; then
   export PATH=$PATH:$ANDROID_HOME/emulator
   export PATH=$PATH:$ANDROID_HOME/platform-tools
 fi
-
-# Rust/Cargo (fallback if not already in PATH from custom/path.zsh)
-if [[ -f "$HOME/.cargo/env" ]]; then
-  . "$HOME/.cargo/env"
-fi

@@ -45,7 +45,7 @@ brew "vbindiff"      # Visual binary diff
 # Misc utilities
 brew "knock"         # Port knocking
 brew "pngcheck"      # PNG validator
-brew "GeoIP2"        # IP geolocation
+brew "geoip2fast"    # IP geolocation
 
 # GUI Applications (commented out by default)
 # cask "burp-suite"      # Web security testing
