@@ -186,17 +186,11 @@ cask "codex"                                   # OpenAI Codex CLI
 cask "sf-symbols"  # iOS/macOS development
 
 ###############################
-#  Drivers                    #
-###############################
-
-cask "logi-options-plus"
-
-###############################
 #  Fonts                      #
 ###############################
 
 # Primary monospace fonts (pick 2-3 favorites)
-cask "font-sf-mono-nerd-font"       # SF Mono with icons
+cask "font-sf-mono-nerd-font-ligaturized" # SF Mono with nerd font icons
 cask "font-jetbrains-mono"          # Popular dev font
 cask "font-cascadia-code"           # Microsoft's dev font
 
