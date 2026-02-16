@@ -136,7 +136,7 @@ cask "visual-studio-code"
 cask "iterm2"
 cask "ghostty"                                 # GPU-accelerated terminal
 cask "warp"                                    # Modern terminal
-cask "docker-desktop"                          # Docker Desktop (renamed from docker)
+cask "orbstack"                                # Docker & Linux VM (replaces Docker Desktop)
 cask "android-platform-tools", args: { appdir: "~/Applications" }
 cask "jetbrains-toolbox"                       # IntelliJ/Android Studio
 cask "xcodes-app"                              # Xcode version manager (renamed from xcodes)
@@ -156,6 +156,7 @@ cask "alfred"
 cask "omnifocus"
 cask "hazel"
 cask "keyboard-maestro"
+cask "bettertouchtool"                         # Input customization & window management
 cask "setapp"
 cask "microsoft-word"
 cask "microsoft-excel"
@@ -165,6 +166,7 @@ cask "microsoft-powerpoint"
 cask "slack"
 cask "discord"
 cask "zoom"
+cask "whatsapp"                                # Direct install (prefer over MAS)
 
 # Utilities
 cask "cyberduck"                               # FTP/cloud storage client
@@ -177,6 +179,7 @@ cask "microsoft-edge"
 # AI Tools
 cask "chatgpt"                                 # ChatGPT desktop app
 cask "claude"                                  # Claude desktop app
+cask "claude-code"                             # Claude Code CLI
 cask "codex"                                   # OpenAI Codex CLI
 
 # Development utilities
@@ -225,9 +228,6 @@ mas "Drafts", id: 1435957248
 mas "Fantastical", id: 975937182
 mas "Cardhop", id: 1290358394                  # Contacts manager
 mas "Tot", id: 1491071483                      # Quick notes
-
-# Communication
-mas "WhatsApp", id: 310633997
 
 # Writing & Reading
 mas "iA Writer", id: 775737590
