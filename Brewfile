@@ -21,6 +21,9 @@ brew "gnu-sed"
 brew "grep"
 brew "make"
 
+# Terminal multiplexer
+brew "tmux"
+
 # Essential system tools
 brew "mas"       # Mac App Store CLI (used by mas entries below)
 brew "curl"

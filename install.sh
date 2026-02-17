@@ -56,6 +56,9 @@ ln -sf "$DOTFILES_PATH/ssh/.ssh/config" ~/.ssh/config
 # Nano
 ln -sf "$DOTFILES_PATH/nano/brew.nanorc" ~/.nanorc
 
+# Tmux
+ln -sf "$DOTFILES_PATH/tmux/.tmux.conf" ~/.tmux.conf
+
 # Brewfile
 ln -sf "$DOTFILES_PATH/Brewfile" ~/Brewfile
 
