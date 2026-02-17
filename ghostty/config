@@ -1,0 +1,33 @@
+# Ghostty Configuration
+# ~/.config/ghostty/config
+
+# Font & sizing
+font-family = "JetBrainsMono Nerd Font"
+font-size = 14
+
+# Comfortable spacing
+window-padding-x = 12
+window-padding-y = 10
+window-padding-balance = true
+
+# Titlebar + window (macOS)
+macos-titlebar-style = tabs
+window-theme = system
+window-decoration = true
+
+# Cursor & background
+cursor-style = bar
+background-opacity = 0.92
+background-blur-radius = 20
+
+# Shell integration
+shell-integration-features = cursor,sudo,title,ssh-env,ssh-terminfo
+
+# Keybinds
+keybind = shift+enter=text:\x1b\r
+
+# Clipboard
+copy-on-select = clipboard
+
+# Scrollback — generous for long Claude Code sessions
+scrollback-limit = 50000

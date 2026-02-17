@@ -54,6 +54,11 @@ ln -sf "$DOTFILES_PATH/ssh/.ssh/config" ~/.ssh/config
 ln -sf "$DOTFILES_PATH/nano/brew.nanorc" ~/.nanorc
 ln -sf "$DOTFILES_PATH/Brewfile" ~/Brewfile
 
+# Ghostty terminal config
+GHOSTTY_CONFIG_DIR="$HOME/Library/Application Support/com.mitchellh.ghostty"
+mkdir -p "$GHOSTTY_CONFIG_DIR"
+ln -sf "$DOTFILES_PATH/ghostty/config" "$GHOSTTY_CONFIG_DIR/config"
+
 # suppress terminal login banners
 touch ~/.hushlogin
 
