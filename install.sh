@@ -2,6 +2,11 @@
 
 set -e
 
+LINK_ONLY=false
+if [[ "$1" == "--link-only" ]]; then
+  LINK_ONLY=true
+fi
+
 echo "🙏 Deep breaths, everything will (probably) be fine!"
 echo ""
 
@@ -18,40 +23,40 @@ fi
 
 # clone this repo if this script is all by itself and/or we're not in the expected location
 if [[ "$INSTALLER_PATH" != "$DOTFILES_PATH" ]] && [[ ! -d "$DOTFILES_PATH" ]]; then
-  git clone https://github.com/sampetherbridge/dotfiles.git "$DOTFILES_PATH"
+  git clone https://github.com/SamPetherbridge/dotfiles.git "$DOTFILES_PATH"
 
   echo "Successfully cloned the full repo to '$DOTFILES_PATH'"
   echo "Run install.sh from that directory to continue. Exiting now..."
   exit 0
 fi
 
-# set up symlinks from various default paths to files in this repo
-if [[ ! -d ~/.config ]]; then
-  mkdir -p ~/.config
-fi
+###############################################################################
+# Symlinks (always runs — fast and idempotent)
+###############################################################################
+
+echo "→ Creating symlinks..."
+
+# Ensure directories exist
+mkdir -p ~/.config
+mkdir -p ~/.ssh && chmod 700 ~/.ssh
+mkdir -p ~/.ssh/conf.d
+
+# Shell
 ln -sf "$DOTFILES_PATH/zsh/.zshrc" ~/.zshrc
 ln -sf "$DOTFILES_PATH/zsh/.zprofile" ~/.zprofile
+touch ~/.zshrc.local
+
+# Git
 ln -sf "$DOTFILES_PATH/git/.gitconfig" ~/.gitconfig
 ln -sf "$DOTFILES_PATH/git/.gitignore_global" ~/.gitignore_global
 
-# this file will be sourced by .zshrc for more sensitive variables/settings
-touch ~/.zshrc.local
-
-# macOS-specific setup
-if [[ "$OSTYPE" != "darwin"* ]]; then
-  echo "This dotfiles repo is macOS-only. Exiting..."
-  exit 1
-fi
-
-# final symlinks
-if [[ ! -d ~/.ssh ]]; then
-  mkdir -p ~/.ssh && chmod 700 ~/.ssh
-fi
-if [[ ! -d ~/.ssh/conf.d ]]; then
-  mkdir -p ~/.ssh/conf.d
-fi
+# SSH
 ln -sf "$DOTFILES_PATH/ssh/.ssh/config" ~/.ssh/config
+
+# Nano
 ln -sf "$DOTFILES_PATH/nano/brew.nanorc" ~/.nanorc
+
+# Brewfile
 ln -sf "$DOTFILES_PATH/Brewfile" ~/Brewfile
 
 # Ghostty terminal config
@@ -59,13 +64,30 @@ GHOSTTY_CONFIG_DIR="$HOME/Library/Application Support/com.mitchellh.ghostty"
 mkdir -p "$GHOSTTY_CONFIG_DIR"
 ln -sf "$DOTFILES_PATH/ghostty/config" "$GHOSTTY_CONFIG_DIR/config"
 
-# suppress terminal login banners
+# Suppress terminal login banners
 touch ~/.hushlogin
+
+echo "  Symlinks created."
+
+###############################################################################
+# Full bootstrap (skipped with --link-only)
+###############################################################################
+
+if [[ "$LINK_ONLY" == true ]]; then
+  echo ""
+  echo "🎉 Symlinks updated! Run without --link-only for full setup."
+  exit 0
+fi
+
+# macOS-specific setup
+if [[ "$OSTYPE" != "darwin"* ]]; then
+  echo "This dotfiles repo is macOS-only. Exiting..."
+  exit 1
+fi
 
 # shellcheck disable=SC1090,SC1091
 source "$DOTFILES_PATH/macos/macos.sh"
 
-# wow
 echo ""
 echo "🎉 It actually worked!"
 echo "Log out and log back in (or just restart) to finish installing all ZSH features."
