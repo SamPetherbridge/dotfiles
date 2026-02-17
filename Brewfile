@@ -76,6 +76,7 @@ brew "openjdk"      # Required for Android development
 brew "fastlane"     # iOS/Android CI/CD automation
 brew "swiftlint"    # Swift code linting
 brew "swiftformat"  # Swift code formatting
+brew "xcodegen"     # Xcode project generator
 
 # JavaScript
 brew "node"            # Node.js runtime
