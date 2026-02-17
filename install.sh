@@ -67,6 +67,16 @@ GHOSTTY_CONFIG_DIR="$HOME/Library/Application Support/com.mitchellh.ghostty"
 mkdir -p "$GHOSTTY_CONFIG_DIR"
 ln -sf "$DOTFILES_PATH/ghostty/config" "$GHOSTTY_CONFIG_DIR/config"
 
+# Claude Code config (symlink individual files, not the whole directory)
+mkdir -p ~/.claude
+ln -sf "$DOTFILES_PATH/claude/CLAUDE.md" ~/.claude/CLAUDE.md
+ln -sf "$DOTFILES_PATH/claude/settings.json" ~/.claude/settings.json
+ln -sf "$DOTFILES_PATH/claude/statusline-command.sh" ~/.claude/statusline-command.sh
+if [[ -d "$DOTFILES_PATH/claude/commands" ]]; then
+  rm -rf ~/.claude/commands
+  ln -sf "$DOTFILES_PATH/claude/commands" ~/.claude/commands
+fi
+
 # Suppress terminal login banners
 touch ~/.hushlogin
 
