@@ -172,6 +172,7 @@ cask "whatsapp"                                # Direct install (prefer over MAS
 
 # Utilities
 cask "cyberduck"                               # FTP/cloud storage client
+cask "dropbox"                                 # Cloud storage
 
 # Browsers
 cask "firefox"
@@ -194,6 +195,7 @@ cask "sf-symbols"  # iOS/macOS development
 # Primary monospace fonts (pick 2-3 favorites)
 cask "font-sf-mono-nerd-font-ligaturized" # SF Mono with nerd font icons
 cask "font-jetbrains-mono"          # Popular dev font
+cask "font-jetbrains-mono-nerd-font" # JetBrains Mono with nerd font icons
 cask "font-cascadia-code"           # Microsoft's dev font
 
 # System fonts
