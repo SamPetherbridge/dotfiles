@@ -29,3 +29,13 @@ if [[ -d "$HOME/Library/Android/sdk" ]]; then
   export PATH=$PATH:$ANDROID_HOME/emulator
   export PATH=$PATH:$ANDROID_HOME/platform-tools
 fi
+
+# Use local SSH key when connected via SSH (bypasses 1Password GUI agent)
+if [ -n "$SSH_CONNECTION" ]; then
+    unset SSH_AUTH_SOCK
+    eval $(ssh-agent -s) > /dev/null 2>&1
+    ssh-add ~/.ssh/id_github 2>/dev/null
+    export GIT_CONFIG_COUNT=1
+    export GIT_CONFIG_KEY_0="commit.gpgsign"
+    export GIT_CONFIG_VALUE_0="false"
+fi
