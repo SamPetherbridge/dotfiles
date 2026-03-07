@@ -55,6 +55,11 @@ if command -v rbenv &>/dev/null; then
   eval "$(rbenv init --no-rehash - zsh)"
 fi
 
+# mint (Swift package manager CLI tools)
+if [[ -d "$HOME/.mint/bin" ]]; then
+  export PATH="$HOME/.mint/bin:$PATH"
+fi
+
 # uv tool binaries (installed via `uv tool install`)
 if [[ -d "$HOME/.local/bin" ]]; then
   export PATH="$HOME/.local/bin:$PATH"

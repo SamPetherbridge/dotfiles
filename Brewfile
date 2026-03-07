@@ -77,6 +77,7 @@ brew "fastlane"     # iOS/Android CI/CD automation
 brew "swiftlint"    # Swift code linting
 brew "swiftformat"  # Swift code formatting
 brew "xcodegen"     # Xcode project generator
+brew "mint"         # Swift package manager for CLI tools
 
 # JavaScript
 brew "node"            # Node.js runtime
