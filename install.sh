@@ -67,6 +67,11 @@ GHOSTTY_CONFIG_DIR="$HOME/Library/Application Support/com.mitchellh.ghostty"
 mkdir -p "$GHOSTTY_CONFIG_DIR"
 ln -sf "$DOTFILES_PATH/ghostty/config" "$GHOSTTY_CONFIG_DIR/config"
 
+# iTerm2 dynamic profiles & color schemes
+ITERM_PROFILES_DIR="$HOME/Library/Application Support/iTerm2/DynamicProfiles"
+mkdir -p "$ITERM_PROFILES_DIR"
+ln -sf "$DOTFILES_PATH/iterm/default.json" "$ITERM_PROFILES_DIR/dotfiles-default.json"
+
 # Claude Code config (symlink individual files, not the whole directory)
 mkdir -p ~/.claude
 ln -sf "$DOTFILES_PATH/claude/CLAUDE.md" ~/.claude/CLAUDE.md

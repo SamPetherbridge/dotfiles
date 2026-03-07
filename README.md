@@ -13,7 +13,7 @@ This repository contains configuration files and installation scripts for settin
 - **Python Management**: Uses `uv` for modern Python package and project management
 - **Git Configuration**: Pre-configured with 1Password SSH signing and useful aliases
 - **SSH Hardening**: Modern security settings with 1Password agent integration
-- **iTerm2**: Custom color schemes and preferences
+- **Terminal Emulators**: Ghostty (primary) and iTerm2 with custom color schemes and preferences
 - **macOS Settings**: Automated system preferences configuration
 
 ## Installation
@@ -37,15 +37,15 @@ cd ~/.dotfiles
 The installer will:
 1. Create symlinks for configuration files
 2. Install Homebrew packages and applications
-3. Set up SSH and iTerm2 configurations
+3. Set up SSH, Ghostty, and iTerm2 configurations
 4. Apply macOS system preferences
-5. Initialize Zsh with zinit plugin manager
+5. Initialize Zsh with Starship prompt
 
 ### Manual Steps After Installation
 
 1. **Log out and log back in** to activate all Zsh features
 2. **Configure 1Password SSH Agent**: Ensure 1Password is installed and SSH agent is enabled
-3. **Import iTerm2 colors**: Color schemes are in `iterm/` directory
+3. **Import iTerm2 color schemes** (optional): The profile auto-loads via Dynamic Profiles, but color schemes in `iterm/*.itermcolors` need manual import via iTerm2 Preferences > Profiles > Colors
 4. **Apply Firefox privacy config** (optional):
    ```bash
    # Find your Firefox profile directory
@@ -87,7 +87,7 @@ The installer will:
 
 ### Applications (via Homebrew Cask)
 
-- **Development**: VS Code, Docker, iTerm2, Android Platform Tools
+- **Development**: VS Code, Ghostty, iTerm2, OrbStack, Android Platform Tools
 - **Cloud**: Google Cloud SDK, Azure CLI
 - **Design**: Adobe Creative Cloud, ImageOptim
 - **Productivity**: 1Password, Alfred, OmniFocus, Hazel, Keyboard Maestro, Setapp
@@ -122,7 +122,9 @@ Includes: nmap, hashcat, mitmproxy, aircrack-ng, and 25+ other tools for authori
 | `zsh/custom/*.zsh` | Modular shell configuration (aliases, functions, PATH) |
 | `git/.gitconfig` | Git settings with 1Password SSH signing |
 | `ssh/.ssh/config` | SSH client configuration with security hardening |
-| `iterm/` | iTerm2 preferences and color schemes |
+| `ghostty/` | Ghostty terminal configuration |
+| `iterm/` | iTerm2 Dynamic Profile and color schemes |
+| `tmux/.tmux.conf` | Tmux configuration with true color support |
 | `firefox/user.js` | Firefox privacy-hardened settings (manual install) |
 | `macos/defaults.sh` | macOS system preferences |
 
@@ -148,8 +150,9 @@ Edit `COMPUTER_NAME` in `macos/defaults.sh` before running the installer
 
 ## Key Technologies
 
-- **Shell**: Zsh with [zinit](https://github.com/zdharma-continuum/zinit) plugin manager
-- **Prompt**: [Powerlevel10k](https://github.com/romkatv/powerlevel10k) theme (included in `zsh/themes/`)
+- **Shell**: Zsh with [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+- **Prompt**: [Starship](https://starship.rs/) cross-shell prompt
+- **Terminals**: [Ghostty](https://ghostty.org/) (primary) and [iTerm2](https://iterm2.com/) with JetBrains Mono Nerd Font
 - **Git Diff**: [Delta](https://github.com/dandavison/delta) for syntax-highlighted diffs
 - **Python**: [uv](https://github.com/astral-sh/uv) for fast Python package management
 

@@ -1,0 +1,339 @@
+{
+  "Profiles": [
+    {
+      "Guid": "EE992430-8AE8-49DF-91D0-8CF41572DB7E",
+      "Name": "Default",
+      "Description": "Default",
+      "Custom Command": "No",
+      "Command": "",
+      "Terminal Type": "xterm-256color",
+      "Character Encoding": 4,
+      "Unicode Version": 9,
+
+      "Normal Font": "JetBrainsMonoNerdFont-Regular 14",
+      "Non Ascii Font": "JetBrainsMonoNerdFont-Regular 14",
+      "ASCII Ligatures": true,
+      "Use Non-ASCII Font": false,
+      "Use Bold Font": true,
+      "Use Italic Font": true,
+      "ASCII Anti Aliased": true,
+      "Non-ASCII Anti Aliased": true,
+      "Draw Powerline Glyphs": true,
+      "Thin Strokes": 4,
+      "Horizontal Spacing": 1,
+      "Vertical Spacing": 1.3,
+
+      "Rows": 38,
+      "Columns": 120,
+      "Scrollback Lines": 0,
+      "Unlimited Scrollback": true,
+
+      "Cursor Type": 1,
+      "Blinking Cursor": true,
+      "Blink Allowed": true,
+
+      "Option Key Sends": 2,
+      "Right Option Key Sends": 0,
+
+      "Transparency": 0.037799202127659574,
+      "Initial Use Transparency": true,
+      "Only The Default BG Color Uses Transparency": true,
+      "Blur": true,
+      "Blur Radius": 10.045428856382978,
+      "Blend": 0.50457144474637694,
+
+      "Background Color": {
+        "Red Component": 0.078431372549019607,
+        "Color Space": "sRGB",
+        "Blue Component": 0.078431372549019607,
+        "Alpha Component": 1,
+        "Green Component": 0.078431372549019607
+      },
+      "Foreground Color": {
+        "Red Component": 0.93725490570068359,
+        "Color Space": "sRGB",
+        "Blue Component": 0.92156857252120972,
+        "Alpha Component": 1,
+        "Green Component": 0.94117647409439087
+      },
+      "Bold Color": {
+        "Red Component": 0.97102361917495728,
+        "Color Space": "sRGB",
+        "Blue Component": 0.97102349996566772,
+        "Alpha Component": 1,
+        "Green Component": 0.97102349996566772
+      },
+      "Cursor Color": {
+        "Red Component": 0.91646724939346313,
+        "Color Space": "sRGB",
+        "Blue Component": 0.91647690534591675,
+        "Alpha Component": 1,
+        "Green Component": 0.91648870706558228
+      },
+      "Cursor Text Color": {
+        "Red Component": 0.15686270594596863,
+        "Color Space": "sRGB",
+        "Blue Component": 0.21176469326019287,
+        "Alpha Component": 1,
+        "Green Component": 0.16470584273338318
+      },
+      "Cursor Guide Color": {
+        "Red Component": 0.70213186740875244,
+        "Color Space": "sRGB",
+        "Blue Component": 1,
+        "Alpha Component": 0.25,
+        "Green Component": 0.9268307089805603
+      },
+      "Selection Color": {
+        "Red Component": 0.57319694757461548,
+        "Color Space": "sRGB",
+        "Blue Component": 0.81719964742660522,
+        "Alpha Component": 1,
+        "Green Component": 0.73586553335189819
+      },
+      "Selected Text Color": {
+        "Red Component": 0,
+        "Color Space": "sRGB",
+        "Blue Component": 0,
+        "Alpha Component": 1,
+        "Green Component": 0
+      },
+      "Badge Color": {
+        "Red Component": 1,
+        "Color Space": "sRGB",
+        "Blue Component": 0,
+        "Alpha Component": 0.5,
+        "Green Component": 0.1491314172744751
+      },
+      "Link Color": {
+        "Red Component": 0.29264676570892334,
+        "Color Space": "sRGB",
+        "Blue Component": 0.85775750875473022,
+        "Alpha Component": 1,
+        "Green Component": 0.66938728094100952
+      },
+
+      "Ansi 0 Color": {
+        "Red Component": 0,
+        "Color Space": "sRGB",
+        "Blue Component": 0,
+        "Alpha Component": 1,
+        "Green Component": 0
+      },
+      "Ansi 1 Color": {
+        "Red Component": 1,
+        "Color Space": "sRGB",
+        "Blue Component": 0.34117639064788818,
+        "Alpha Component": 1,
+        "Green Component": 0.36078426241874695
+      },
+      "Ansi 2 Color": {
+        "Red Component": 0.35294127464294434,
+        "Color Space": "sRGB",
+        "Blue Component": 0.55686265230178833,
+        "Alpha Component": 1,
+        "Green Component": 0.96862751245498657
+      },
+      "Ansi 3 Color": {
+        "Red Component": 0.95294123888015747,
+        "Color Space": "sRGB",
+        "Blue Component": 0.61568623781204224,
+        "Alpha Component": 1,
+        "Green Component": 0.97647064924240112
+      },
+      "Ansi 4 Color": {
+        "Red Component": 0.34117650985717773,
+        "Color Space": "sRGB",
+        "Blue Component": 0.99999994039535522,
+        "Alpha Component": 1,
+        "Green Component": 0.78039222955703735
+      },
+      "Ansi 5 Color": {
+        "Red Component": 1,
+        "Color Space": "sRGB",
+        "Blue Component": 0.75686269998550415,
+        "Alpha Component": 1,
+        "Green Component": 0.4156862199306488
+      },
+      "Ansi 6 Color": {
+        "Red Component": 0.60392171144485474,
+        "Color Space": "sRGB",
+        "Blue Component": 0.99607843160629272,
+        "Alpha Component": 1,
+        "Green Component": 0.92941170930862427
+      },
+      "Ansi 7 Color": {
+        "Red Component": 0.94509810209274292,
+        "Color Space": "sRGB",
+        "Blue Component": 0.94117647409439087,
+        "Alpha Component": 1,
+        "Green Component": 0.94509810209274292
+      },
+      "Ansi 8 Color": {
+        "Red Component": 0.40784323215484619,
+        "Color Space": "sRGB",
+        "Blue Component": 0.40784311294555664,
+        "Alpha Component": 1,
+        "Green Component": 0.40784311294555664
+      },
+      "Ansi 9 Color": {
+        "Red Component": 1,
+        "Color Space": "sRGB",
+        "Blue Component": 0.34117639064788818,
+        "Alpha Component": 1,
+        "Green Component": 0.36078426241874695
+      },
+      "Ansi 10 Color": {
+        "Red Component": 0.35294127464294434,
+        "Color Space": "sRGB",
+        "Blue Component": 0.55686265230178833,
+        "Alpha Component": 1,
+        "Green Component": 0.96862751245498657
+      },
+      "Ansi 11 Color": {
+        "Red Component": 0.95294123888015747,
+        "Color Space": "sRGB",
+        "Blue Component": 0.61568623781204224,
+        "Alpha Component": 1,
+        "Green Component": 0.97647064924240112
+      },
+      "Ansi 12 Color": {
+        "Red Component": 0.34117650985717773,
+        "Color Space": "sRGB",
+        "Blue Component": 0.99999994039535522,
+        "Alpha Component": 1,
+        "Green Component": 0.78039222955703735
+      },
+      "Ansi 13 Color": {
+        "Red Component": 1,
+        "Color Space": "sRGB",
+        "Blue Component": 0.75686269998550415,
+        "Alpha Component": 1,
+        "Green Component": 0.4156862199306488
+      },
+      "Ansi 14 Color": {
+        "Red Component": 0.60392171144485474,
+        "Color Space": "sRGB",
+        "Blue Component": 0.99607843160629272,
+        "Alpha Component": 1,
+        "Green Component": 0.92941170930862427
+      },
+      "Ansi 15 Color": {
+        "Red Component": 0.94509810209274292,
+        "Color Space": "sRGB",
+        "Blue Component": 0.94117647409439087,
+        "Alpha Component": 1,
+        "Green Component": 0.94509810209274292
+      },
+
+      "Visual Bell": true,
+      "Silence Bell": true,
+      "Flashing Bell": false,
+      "BM Growl": false,
+
+      "Close Sessions On End": true,
+      "Prompt Before Closing 2": false,
+      "Session Close Undo Timeout": 15,
+      "Jobs to Ignore": ["rlogin", "ssh", "slogin", "telnet"],
+
+      "Mouse Reporting": true,
+      "Brighten Bold Text": true,
+      "Use Bright Bold": true,
+      "Ambiguous Double Width": false,
+      "Minimum Contrast": 0,
+
+      "Send Code When Idle": false,
+      "Idle Code": 0,
+
+      "Sync Title": false,
+      "Title Components": 2,
+      "Allow Title Reporting": false,
+      "Disable Window Resizing": true,
+
+      "Icon": 1,
+      "Has Hotkey": false,
+      "Shortcut": "",
+      "Tags": [],
+      "Bound Hosts": [],
+      "Default Bookmark": "No",
+      "Window Type": 0,
+      "Screen": -1,
+      "Space": 0,
+      "Hide After Opening": false,
+      "Open Toolbelt": false,
+      "Open Password Manager Automatically": false,
+      "Show Mark Indicators": false,
+      "Show Status Bar": false,
+      "Background Image Location": "",
+      "Initial Text": "",
+
+      "Custom Directory": "No",
+
+      "Semantic History": {
+        "text": "",
+        "action": "editor",
+        "editor": "com.microsoft.VSCode"
+      },
+
+      "Smart Selection Rules": [
+        {
+          "notes": "Word bounded by whitespace",
+          "regex": "\\S+",
+          "precision": "low"
+        },
+        {
+          "notes": "C++ namespace::identifier",
+          "regex": "([a-zA-Z0-9_]+::)+[a-zA-Z0-9_]+",
+          "precision": "normal"
+        },
+        {
+          "notes": "Paths",
+          "regex": "\\~?\\/?([[:letter:][:number:]._-]+\\/+)+[[:letter:][:number:]._-]+\\/?",
+          "precision": "normal"
+        },
+        {
+          "notes": "Quoted string",
+          "regex": "@?\"(?:[^\"\\\\]|\\\\.)*\"",
+          "precision": "normal"
+        },
+        {
+          "notes": "Java/Python include paths",
+          "regex": "([[:letter:][:number:]._]+\\.)+[[:letter:][:number:]._]+",
+          "precision": "normal"
+        },
+        {
+          "notes": "mailto URL",
+          "regex": "\\bmailto:([a-z0-9A-Z_]+@)?([a-zA-Z0-9\\-]+\\.)*[a-zA-Z0-9\\-]+\\b",
+          "precision": "normal"
+        },
+        {
+          "notes": "Obj-C selector",
+          "regex": "@selector\\([^)]+\\)",
+          "precision": "high"
+        },
+        {
+          "notes": "email address",
+          "regex": "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}\\b",
+          "precision": "high"
+        },
+        {
+          "notes": "HTTP URL",
+          "regex": "https?:\\/\\/([a-z0-9A-Z]+(:[a-zA-Z0-9]+)?@)?([a-z0-9A-Z][-a-z0-9A-Z]*\\.)+[A-Za-z][-A-Za-z]*((:[0-9]+)?)(\\/[a-zA-Z0-9;\\/\\.\\-_+%?&@=#\\(\\)~]*)?",
+          "precision": "very_high"
+        },
+        {
+          "notes": "SSH URL",
+          "regex": "\\bssh:([a-z0-9A-Z_]+@)?([a-zA-Z0-9\\-]+\\.)*[a-zA-Z0-9\\-]+\\b",
+          "precision": "very_high"
+        },
+        {
+          "notes": "Telnet URL",
+          "regex": "\\btelnet:([a-z0-9A-Z_]+@)?([a-zA-Z0-9\\-]+\\.)*[a-zA-Z0-9\\-]+\\b",
+          "precision": "very_high"
+        }
+      ],
+
+      "Keyboard Map": {}
+    }
+  ]
+}

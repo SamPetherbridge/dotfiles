@@ -136,6 +136,7 @@ cask "tailscale-app"                           # Tailscale VPN (renamed from tai
 # Development Tools
 cask "visual-studio-code"
 cask "ghostty"                                 # GPU-accelerated terminal
+cask "iterm2"                                  # Feature-rich terminal
 cask "warp"                                    # Modern terminal
 cask "orbstack"                                # Docker & Linux VM (replaces Docker Desktop)
 cask "android-platform-tools", args: { appdir: "~/Applications" }
