@@ -39,3 +39,12 @@ if [ -n "$SSH_CONNECTION" ]; then
     export GIT_CONFIG_KEY_0="commit.gpgsign"
     export GIT_CONFIG_VALUE_0="false"
 fi
+
+# Clear mouse tracking left enabled by an interrupted SSH/TUI session.
+autoload -Uz add-zsh-hook
+_clear_mouse_tracking() {
+  if [[ -t 1 ]]; then
+    printf '\033[?1000l\033[?1002l\033[?1003l\033[?1006l'
+  fi
+}
+add-zsh-hook precmd _clear_mouse_tracking
